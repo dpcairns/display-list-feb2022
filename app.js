@@ -1,8 +1,24 @@
-// import functions and grab DOM elements
+import { fruits } from './fruits-data.js';
+import { renderFruitEl } from './render-fruit.js';
 
-// initialize global state
+const fruitListEl = document.querySelector('.fruit-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let fruit of fruits) {
+    const fruitEl = renderFruitEl(fruit);
+
+    fruitListEl.append(fruitEl);
+}
+
+import { books } from './book-data.js';
+import { renderBookEl } from './render-book.js';
+
+const bookListEl = document.querySelector('.book-list');
+
+for (let book of books) {
+    const bookEl = renderBookEl(book);
+
+    bookListEl.append(bookEl);
+}
+
+
+
